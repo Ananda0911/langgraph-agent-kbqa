@@ -1,62 +1,61 @@
 [
-  {
-    "question": "雇主责任险的死亡赔偿金是多少",
-    "expected_docs": ["雇主责任险条款说明.txt"],
-    "expected_keywords": ["死亡赔偿金", "50万"]
-  },
-  {
-    "question": "十级伤残能赔多少比例",
-    "expected_docs": ["雇主责任险条款说明.txt"],
-    "expected_keywords": ["十级", "10%"]
-  },
-  {
-    "question": "保险哪些情况不赔",
-    "expected_docs": ["雇主责任险条款说明.txt"],
-    "expected_keywords": ["除外责任", "酗酒", "战争"]
-  },
-  {
-    "question": "误工费每天最多赔多少",
-    "expected_docs": ["雇主责任险条款说明.txt"],
-    "expected_keywords": ["误工", "200"]
-  },
-  {
-    "question": "2025年全球新能源汽车销量渗透率多少",
-    "expected_docs": ["2026年新能源汽车行业研报.txt"],
-    "expected_keywords": ["2150", "30%"]
-  },
-  {
-    "question": "固态电池什么时候能装车量产",
-    "expected_docs": ["2026年新能源汽车行业研报.txt"],
-    "expected_keywords": ["固态电池", "2028", "360Wh"]
-  },
-  {
-    "question": "碳酸锂价格现在什么水平",
-    "expected_docs": ["2026年新能源汽车行业研报.txt"],
-    "expected_keywords": ["碳酸锂", "7.2万"]
-  },
-  {
-    "question": "公司在一线城市的住宿报销上限是多少",
-    "expected_docs": ["员工费用报销管理制度.txt"],
-    "expected_keywords": ["一线", "500", "900"]
-  },
-  {
-    "question": "报销的审批权限是怎么划分的",
-    "expected_docs": ["员工费用报销管理制度.txt"],
-    "expected_keywords": ["审批", "10000", "总经理"]
-  },
-  {
-    "question": "出差餐补标准",
-    "expected_docs": ["员工费用报销管理制度.txt"],
-    "expected_keywords": ["餐补", "100"]
-  },
-  {
-    "question": "稳健增益基金的赎回费怎么收",
-    "expected_docs": ["稳健增益混合型基金产品说明.txt"],
-    "expected_keywords": ["赎回费", "1.5%", "0.5%"]
-  },
-  {
-    "question": "基金的最大回撤和夏普比率",
-    "expected_docs": ["稳健增益混合型基金产品说明.txt"],
-    "expected_keywords": ["回撤", "4.8", "夏普"]
-  }
+  {"question": "雇主责任险的死亡赔偿金是多少", "expected_docs": ["雇主责任险条款说明.txt"], "expected_keywords": ["死亡赔偿金", "50万"]},
+  {"question": "十级伤残能赔多少比例", "expected_docs": ["雇主责任险条款说明.txt"], "expected_keywords": ["十级", "10%"]},
+  {"question": "保险哪些情况不赔", "expected_docs": ["雇主责任险条款说明.txt"], "expected_keywords": ["除外责任", "酗酒"]},
+  {"question": "误工费每天最多赔多少", "expected_docs": ["雇主责任险条款说明.txt"], "expected_keywords": ["误工", "200元"]},
+  {"question": "医疗费用的免赔额是多少，赔付比例多少", "expected_docs": ["雇主责任险条款说明.txt"], "expected_keywords": ["免赔额100元", "赔付比例90%"]},
+  {"question": "雇员无证驾驶发生意外保险赔吗", "expected_docs": ["雇主责任险条款说明.txt"], "expected_keywords": ["无证驾驶"]},
+  {"question": "战争或罢工导致的伤亡保险赔不赔", "expected_docs": ["雇主责任险条款说明.txt"], "expected_keywords": ["战争", "罢工"]},
+  {"question": "打官司产生的律师费保险承担吗", "expected_docs": ["雇主责任险条款说明.txt"], "expected_keywords": ["律师费", "法律费用"]},
+  {"question": "出险后多长时间内必须报案", "expected_docs": ["雇主责任险条款说明.txt"], "expected_keywords": ["48小时"]},
+  {"question": "理赔材料齐全后多少个工作日核定", "expected_docs": ["雇主责任险条款说明.txt"], "expected_keywords": ["10个工作日"]},
+  {"question": "建筑行业的基准费率是多少", "expected_docs": ["雇主责任险条款说明.txt"], "expected_keywords": ["建筑业", "0.6%"]},
+  {"question": "高危职业的保费怎么上浮", "expected_docs": ["雇主责任险条款说明.txt"], "expected_keywords": ["上浮30%", "上浮60%"]},
+  {"question": "雇主责任险的保费计算公式是什么", "expected_docs": ["雇主责任险条款说明.txt"], "expected_keywords": ["基础保费", "基准费率"]},
+  {"question": "保单包含哪些附加条款", "expected_docs": ["雇主责任险条款说明.txt"], "expected_keywords": ["上下班途中", "就餐时间"]},
+
+  {"question": "2025年全球新能源汽车销量渗透率多少", "expected_docs": ["2026年新能源汽车行业研报.txt"], "expected_keywords": ["2150万", "30%"]},
+  {"question": "固态电池什么时候能装车量产", "expected_docs": ["2026年新能源汽车行业研报.txt"], "expected_keywords": ["固态电池", "360Wh"]},
+  {"question": "碳酸锂价格现在什么水平", "expected_docs": ["2026年新能源汽车行业研报.txt"], "expected_keywords": ["碳酸锂", "7.2万"]},
+  {"question": "中国新能源汽车销量占全球多少份额", "expected_docs": ["2026年新能源汽车行业研报.txt"], "expected_keywords": ["1350万", "62.8%"]},
+  {"question": "新能源行业毛利率恢复到多少了", "expected_docs": ["2026年新能源汽车行业研报.txt"], "expected_keywords": ["17.5%", "19.2%"]},
+  {"question": "磷酸铁锂和三元锂的装机占比是多少", "expected_docs": ["2026年新能源汽车行业研报.txt"], "expected_keywords": ["72:28", "磷酸铁锂"]},
+  {"question": "钠离子电池预计什么时候批量装车", "expected_docs": ["2026年新能源汽车行业研报.txt"], "expected_keywords": ["钠离子", "12GWh"]},
+  {"question": "智能驾驶芯片的算力门槛提升到多少", "expected_docs": ["2026年新能源汽车行业研报.txt"], "expected_keywords": ["200TOPS"]},
+  {"question": "中国新能源汽车出口了多少辆", "expected_docs": ["2026年新能源汽车行业研报.txt"], "expected_keywords": ["185万", "同比增长52%"]},
+  {"question": "头部四家车企合计份额是多少", "expected_docs": ["2026年新能源汽车行业研报.txt"], "expected_keywords": ["68%"]},
+  {"question": "城市领航辅助NOA下沉到什么价格带", "expected_docs": ["2026年新能源汽车行业研报.txt"], "expected_keywords": ["15万"]},
+  {"question": "2026年碳酸锂预计均价区间", "expected_docs": ["2026年新能源汽车行业研报.txt"], "expected_keywords": ["6.5-8万"]},
+  {"question": "全固态电池商业化预计什么时点", "expected_docs": ["2026年新能源汽车行业研报.txt"], "expected_keywords": ["2028年之后"]},
+  {"question": "国产智驾芯片市占率提升到多少", "expected_docs": ["2026年新能源汽车行业研报.txt"], "expected_keywords": ["35%"]},
+
+  {"question": "一线城市住宿报销上限是多少", "expected_docs": ["员工费用报销管理制度.txt"], "expected_keywords": ["一线城市", "900"]},
+  {"question": "报销的审批权限是怎么划分的", "expected_docs": ["员工费用报销管理制度.txt"], "expected_keywords": ["审批", "10000元"]},
+  {"question": "出差餐补标准是多少", "expected_docs": ["员工费用报销管理制度.txt"], "expected_keywords": ["餐补", "100元"]},
+  {"question": "费用发生后多少天内必须提交报销", "expected_docs": ["员工费用报销管理制度.txt"], "expected_keywords": ["30天"]},
+  {"question": "高铁报销能坐什么座位等级", "expected_docs": ["员工费用报销管理制度.txt"], "expected_keywords": ["二等座", "一等座"]},
+  {"question": "什么情况下可以申请商务舱", "expected_docs": ["员工费用报销管理制度.txt"], "expected_keywords": ["商务舱", "部门总监审批"]},
+  {"question": "市内交通费单程超过多少要说明原因", "expected_docs": ["员工费用报销管理制度.txt"], "expected_keywords": ["150元"]},
+  {"question": "陪客户出差住宿标准可以上浮多少", "expected_docs": ["员工费用报销管理制度.txt"], "expected_keywords": ["上浮30%"]},
+  {"question": "招待客户用餐人均预算上限多少", "expected_docs": ["员工费用报销管理制度.txt"], "expected_keywords": ["人均不超过300元"]},
+  {"question": "报销发票有什么要求", "expected_docs": ["员工费用报销管理制度.txt"], "expected_keywords": ["增值税发票", "纳税人识别号"]},
+  {"question": "虚开发票会怎么处理", "expected_docs": ["员工费用报销管理制度.txt"], "expected_keywords": ["虚开发票", "解除劳动合同"]},
+  {"question": "每月几号前提交报销可以随下月工资发放", "expected_docs": ["员工费用报销管理制度.txt"], "expected_keywords": ["25日", "下月10日"]},
+  {"question": "坐飞机报销是什么舱位标准", "expected_docs": ["员工费用报销管理制度.txt"], "expected_keywords": ["经济舱"]},
+  {"question": "二线城市总监住宿标准是多少", "expected_docs": ["员工费用报销管理制度.txt"], "expected_keywords": ["二线城市", "700元"]},
+
+  {"question": "稳健增益基金的赎回费怎么收", "expected_docs": ["稳健增益混合型基金产品说明.txt"], "expected_keywords": ["赎回费", "1.5%"]},
+  {"question": "基金的最大回撤和夏普比率是多少", "expected_docs": ["稳健增益混合型基金产品说明.txt"], "expected_keywords": ["4.8%", "夏普比率"]},
+  {"question": "稳健增益基金的基金代码是多少", "expected_docs": ["稳健增益混合型基金产品说明.txt"], "expected_keywords": ["018566", "018567"]},
+  {"question": "基金的管理费和托管费是多少", "expected_docs": ["稳健增益混合型基金产品说明.txt"], "expected_keywords": ["管理费", "0.2%"]},
+  {"question": "基金股票仓位配置比例范围", "expected_docs": ["稳健增益混合型基金产品说明.txt"], "expected_keywords": ["15%-45%"]},
+  {"question": "这只基金的风险等级是什么", "expected_docs": ["稳健增益混合型基金产品说明.txt"], "expected_keywords": ["R3", "中风险"]},
+  {"question": "基金管理人是哪家公司", "expected_docs": ["稳健增益混合型基金产品说明.txt"], "expected_keywords": ["华信基金"]},
+  {"question": "基金什么时候成立的", "expected_docs": ["稳健增益混合型基金产品说明.txt"], "expected_keywords": ["2023年6月15日"]},
+  {"question": "基金的业绩比较基准是什么", "expected_docs": ["稳健增益混合型基金产品说明.txt"], "expected_keywords": ["业绩比较基准", "沪深300"]},
+  {"question": "A类申购费第三方平台优惠后多少", "expected_docs": ["稳健增益混合型基金产品说明.txt"], "expected_keywords": ["一折优惠", "0.12%"]},
+  {"question": "C类份额的销售服务费是多少", "expected_docs": ["稳健增益混合型基金产品说明.txt"], "expected_keywords": ["销售服务费", "0.6%"]},
+  {"question": "基金成立以来累计净值增长率多少", "expected_docs": ["稳健增益混合型基金产品说明.txt"], "expected_keywords": ["28.6%", "7.9%"]},
+  {"question": "沪深300估值分位高的时候怎么调仓", "expected_docs": ["稳健增益混合型基金产品说明.txt"], "expected_keywords": ["70%分位", "逆向再平衡"]},
+  {"question": "基金的托管人是哪家银行", "expected_docs": ["稳健增益混合型基金产品说明.txt"], "expected_keywords": ["中国建设银行"]}
 ]
