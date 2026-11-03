@@ -1,0 +1,62 @@
+[
+  {
+    "question": "雇主责任险的死亡赔偿金是多少",
+    "expected_docs": ["雇主责任险条款说明.txt"],
+    "expected_keywords": ["死亡赔偿金", "50万"]
+  },
+  {
+    "question": "十级伤残能赔多少比例",
+    "expected_docs": ["雇主责任险条款说明.txt"],
+    "expected_keywords": ["十级", "10%"]
+  },
+  {
+    "question": "保险哪些情况不赔",
+    "expected_docs": ["雇主责任险条款说明.txt"],
+    "expected_keywords": ["除外责任", "酗酒", "战争"]
+  },
+  {
+    "question": "误工费每天最多赔多少",
+    "expected_docs": ["雇主责任险条款说明.txt"],
+    "expected_keywords": ["误工", "200"]
+  },
+  {
+    "question": "2025年全球新能源汽车销量渗透率多少",
+    "expected_docs": ["2026年新能源汽车行业研报.txt"],
+    "expected_keywords": ["2150", "30%"]
+  },
+  {
+    "question": "固态电池什么时候能装车量产",
+    "expected_docs": ["2026年新能源汽车行业研报.txt"],
+    "expected_keywords": ["固态电池", "2028", "360Wh"]
+  },
+  {
+    "question": "碳酸锂价格现在什么水平",
+    "expected_docs": ["2026年新能源汽车行业研报.txt"],
+    "expected_keywords": ["碳酸锂", "7.2万"]
+  },
+  {
+    "question": "公司在一线城市的住宿报销上限是多少",
+    "expected_docs": ["员工费用报销管理制度.txt"],
+    "expected_keywords": ["一线", "500", "900"]
+  },
+  {
+    "question": "报销的审批权限是怎么划分的",
+    "expected_docs": ["员工费用报销管理制度.txt"],
+    "expected_keywords": ["审批", "10000", "总经理"]
+  },
+  {
+    "question": "出差餐补标准",
+    "expected_docs": ["员工费用报销管理制度.txt"],
+    "expected_keywords": ["餐补", "100"]
+  },
+  {
+    "question": "稳健增益基金的赎回费怎么收",
+    "expected_docs": ["稳健增益混合型基金产品说明.txt"],
+    "expected_keywords": ["赎回费", "1.5%", "0.5%"]
+  },
+  {
+    "question": "基金的最大回撤和夏普比率",
+    "expected_docs": ["稳健增益混合型基金产品说明.txt"],
+    "expected_keywords": ["回撤", "4.8", "夏普"]
+  }
+]

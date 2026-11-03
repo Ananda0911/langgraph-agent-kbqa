@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+
+# 数据与索引（SQLite 示例库启动时自动重建）
+data/
+
+# 本地依赖（pip --target 安装的 ddgs）
+libs/
+
+# 密钥配置（真实 config.yaml 含 API Key，严禁入库）
+config.yaml
+
+# IDE
+.vscode/
+.idea/
+.trae-html-share-packages/
+
+# 系统
+.DS_Store
+Thumbs.db

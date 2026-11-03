@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>企业知识库问答系统</title>
+<link rel="stylesheet" href="/web/style.css">
+</head>
+<body>
+<div class="app">
+  <!-- ============ 主聊天区 ============ -->
+  <main class="chat">
+    <header class="chat-header">
+      <div class="brand">
+        <div class="logo">知</div>
+        <div>
+          <h1>企业知识库问答系统</h1>
+          <p class="sub">LangGraph Agent · 意图识别 · 自主规划 · 工具调用 · 反思评估</p>
+        </div>
+      </div>
+      <div class="chips" id="status-chips">
+        <select id="model-select" class="chip model-select" title="切换模型"></select>
+        <span class="chip" id="chip-llm">LLM: 检测中…</span>
+        <span class="chip" id="chip-docs">文档 0</span>
+        <span class="chip" id="chip-chunks">知识块 0</span>
+      </div>
+    </header>
+
+    <div class="messages" id="messages">
+      <div class="msg assistant">
+        <div class="bubble">
+          <p>你好，我是企业智能助手（LangGraph Agent）。已预加载金融示例文档与企业数据库，支持知识库检索、数据库查询、联网搜索、通讯录（MCP）与数学计算。</p>
+          <p class="hint">试试：「雇主责任险哪些情况不赔」「本月销售额最高的客户是谁」「最近新能源行业有什么新闻」「查一下技术部周杰的联系方式」</p>
+        </div>
+      </div>
+    </div>
+
+    <footer class="composer">
+      <textarea id="input" rows="1" placeholder="输入问题，Enter 发送，Shift+Enter 换行"></textarea>
+      <button id="send" class="btn-primary" disabled>发送</button>
+    </footer>
+  </main>
+
+  <!-- ============ 侧边栏 ============ -->
+  <aside class="side">
+    <nav class="tabs">
+      <button class="tab active" data-tab="docs">文档库</button>
+      <button class="tab" data-tab="eval">评估</button>
+      <button class="tab" data-tab="memory">会话记忆</button>
+    </nav>
+
+    <!-- 文档库 -->
+    <section class="panel active" id="panel-docs">
+      <div class="upload-zone" id="drop-zone">
+        <input type="file" id="file-input" multiple accept=".pdf,.docx,.txt,.md" hidden>
+        <p>拖拽或点击上传</p>
+        <p class="hint">支持 PDF / DOCX / TXT / MD</p>
+      </div>
+      <div id="doc-list" class="doc-list"></div>
+    </section>
+
+    <!-- 评估 -->
+    <section class="panel" id="panel-eval">
+      <div class="eval-head">
+        <p>Golden Dataset 自动化评估（Hit Rate@5 / MRR）</p>
+        <button id="run-eval" class="btn-primary">运行评估</button>
+      </div>
+      <div id="eval-result"></div>
+    </section>
+
+    <!-- 会话记忆 -->
+    <section class="panel" id="panel-memory">
+      <div class="eval-head">
+        <p>分级记忆 + 行动记忆轨迹</p>
+        <button id="clear-memory" class="btn-ghost">清空</button>
+      </div>
+      <div id="memory-view"></div>
+    </section>
+  </aside>
+</div>
+<script src="/web/app.js"></script>
+</body>
+</html>

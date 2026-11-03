@@ -1,0 +1,82 @@
+# LangGraph Agent 企业知识库问答系统 配置文件（模板）
+# 使用方法: 复制为 config.yaml 并填入你的 API Key
+
+server:
+  host: 127.0.0.1
+  port: 8000
+
+# ============ LLM 配置（OpenAI 兼容 API）============
+# 填入 api_key 后自动启用真实 LLM（如阿里 DashScope 的 Qwen / DeepSeek / 其它兼容端点）
+# 不填 api_key 时自动降级为内置 Mock 抽取式回答，保证开箱即用
+llm:
+  api_key: ""                       # 例: sk-xxxxxxxx (DashScope Key)
+  base_url: "https://dashscope.aliyuncs.com/compatible-mode/v1"
+  model: "qwen-plus"
+  temperature: 0.3
+  max_tokens: 1024
+  timeout: 60                       # 秒
+  # ============ 多模型支持：运行时可切换的模型 profiles ============
+  models:
+    default:
+      model: "qwen-plus"
+      description: "千问 Plus（均衡）"
+    fast:
+      model: "qwen-turbo"
+      description: "千问 Turbo（快速）"
+    max:
+      model: "qwen-max"
+      description: "千问 Max（最强）"
+
+# ============ Embedding 配置 ============
+# local_hash: 本地哈希特征向量（无外部依赖，轻量方案默认值）
+# openai_compatible: 调用兼容 embeddings API（需填 api_key）
+embedding:
+  provider: local_hash
+  api_key: ""
+  base_url: "https://dashscope.aliyuncs.com/compatible-mode/v1"
+  model: "text-embedding-v3"
+  dim: 2048                          # local_hash 模式的向量维度
+
+# ============ 检索配置 ============
+retrieval:
+  chunk_size: 400                     # 分块目标字数
+  chunk_overlap: 80                   # 块间重叠字数
+  candidate_k: 10                     # 每路召回候选数
+  top_k: 5                            # 最终返回 Top-K
+  fusion:
+    method: weighted                  # weighted (加权融合) | rrf (倒数排名融合)
+    bm25_weight: 0.5
+    vector_weight: 0.5
+    rrf_k: 60
+  rerank:
+    enabled: true
+    # llm: 用 LLM 对候选打分重排（需 api_key，失败自动回退融合分）
+    # fusion: 直接使用融合分数（无向量库轻量模式）
+    provider: llm
+
+# ============ LangGraph Agent 配置 ============
+agent:
+  enabled: true                      # /api/chat 走 Agent 管道（false 则回退纯 RAG）
+  max_iterations: 3                   # 反思重试上限（防死循环）
+  reflection: true                   # 启用反思评估节点
+  max_plan_steps: 6                  # 单次计划最大步骤数
+  web_search:
+    max_results: 5                   # 联网搜索每次返回条数
+  # MCP 服务（stdio JSON-RPC）：启动时自动发现其工具清单
+  mcp_servers:
+    contacts:
+      command: "python"
+      args: ["mcp_servers/contacts_server.py"]
+      description: "企业通讯录"
+
+# ============ 分级记忆配置 ============
+memory:
+  short_term_rounds: 6                # 短期记忆保留的最近轮数
+  long_term_max_summaries: 20         # 长期摘要记忆最大条数
+  compress_threshold: 8              # 超过该轮数触发长期压缩
+
+# ============ 数据目录 ============
+data:
+  documents_dir: "data/documents"    # 上传文档存储
+  index_dir: "data/index"            # 索引持久化
+  seed_dir: "seed_docs"               # 启动时预加载的示例文档
